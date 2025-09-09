@@ -5,6 +5,7 @@ import { supabase } from "./supabaseClient";
 import Login from "./Login";
 import AdminCreateUserOnDevice from "./AdminCreateUserOnDevice";
 import InstallPWAButton from "./InstallPWAButton";
+import InstallPWAButtoniOS from "./InstallPWAButtoniOS";
 
 export default function App() {
   const [session, setSession] = useState<Session | null>(null);
@@ -40,6 +41,7 @@ export default function App() {
         <hr />
 
         <InstallPWAButton />
+        <InstallPWAButtoniOS />
       </div>
     );
   }
