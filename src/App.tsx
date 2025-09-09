@@ -4,6 +4,7 @@ import type { Session } from "@supabase/supabase-js";
 import { supabase } from "./supabaseClient";
 import Login from "./Login";
 import AdminCreateUserOnDevice from "./AdminCreateUserOnDevice";
+import InstallPWAButton from "./InstallPWAButton";
 
 export default function App() {
   const [session, setSession] = useState<Session | null>(null);
@@ -35,6 +36,10 @@ export default function App() {
         <hr />
 
         <AdminCreateUserOnDevice onSignedIn={(s: Session | null) => setSession(s)} />
+        
+        <hr />
+
+        <InstallPWAButton />
       </div>
     );
   }

@@ -32,5 +32,5 @@ export default defineConfig({
       suppressWarnings: true,
       type: 'module',
     },
-  })],
+  })]
 })
