@@ -6,6 +6,7 @@ import Login from "./Login";
 import AdminCreateUserOnDevice from "./AdminCreateUserOnDevice";
 import InstallPWAButton from "./InstallPWAButton";
 import InstallPWAButtoniOS from "./InstallPWAButtoniOS";
+import DeviceLabel from "./DeviceLabel";
 
 export default function App() {
   const [session, setSession] = useState<Session | null>(null);
@@ -30,6 +31,8 @@ export default function App() {
   if (!session) {
     return (
       <div style={{ display: "grid", gap: "2rem", padding: "2rem" }}>
+        <DeviceLabel/>
+        <br />
         <h2>Welcome – please log in</h2>
 
         <Login onSignedIn={(s: Session | null) => setSession(s)} />
